@@ -82,11 +82,11 @@ for x in range(len(rango_opciones_descarga)):
 
     # Introduce el tipo de elemento a descargar y pulsa el botón de buscar
     time.sleep(2)
-    select_element = driver.find_element(By.ID, "MainContent_ctrlResolutionSearch_ddlLetterTemplate")  # Replace with the actual ID
+    select_element = driver.find_element(By.ID, "MainContent_ctrlResolutionSearch_ddlLetterTemplate") 
     select = Select(select_element)
     select.select_by_index(rango_opciones_descarga[x])
     time.sleep(1)
-    button_class_name = "ui-button-text"  # Replace with the actual class name of the button
+    button_class_name = "ui-button-text"  
     button = driver.find_element(By.CLASS_NAME, button_class_name)
     button.click()
 
@@ -101,7 +101,7 @@ for x in range(len(rango_opciones_descarga)):
     except:
         # Localiza la tabla e itera por cada una de sus filas
         table = driver.find_element(By.ID, "MainContent_ctrlResolutionSearch_ctrlDocumentList_gvDocuments")
-        rows = table.find_elements(By.XPATH, ".//tr[position() > 1]")  # Skips the header row
+        rows = table.find_elements(By.XPATH, ".//tr[position() > 1]")  
         for row in rows:
             try:
                 # Encuentra el elemento en la tercera columna (el PDF a descargar)
