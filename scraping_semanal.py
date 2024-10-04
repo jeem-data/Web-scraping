@@ -18,7 +18,7 @@ def get_days():
     return last_week_formatted, today_formatted
 
 # Directorio donde se descargaran los documentos (reemplazar con el directorio deseado)
-download_dir = "C:/Users/10031/Desktop/TFM/WebScraping/Descargas"
+download_dir = ""
 
 # Obtenemos las fechas para las cuales se descargarán los documentos
 last_week_formatted, today_formatted = get_days()
